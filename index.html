@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:wght@100..900&family=Outfit:wght@100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:wght@100..900&family=Outfit:wght@100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Recipe page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: hsl(330, 100%, 98%);
+      }
+      .parent {
+        border-radius: 16px;
+        margin: auto;
+        margin-top: 80px;
+        margin-bottom: 90px;
+        max-width: 700px;
+        background-color: white;
+        padding: 2rem;
+        border: none;
+        position: relative;
+      }
+      .omelette {
+        border-radius: 10px;
+        width: 100%;
+      }
+      h1 {
+        font-size: 40px;
+        font-weight: lighter;
+      }
+      .header {
+        font-family: "young serif", serif;
+        font-weight: lighter;
+      }
+      .outfit {
+        font-family: "Outfit", sans-serif;
+        color: hsl(0, 0%, 41%);
+      }
+      .pink {
+        /*; */
+        background-color: hsl(338, 100%, 98%);
+        padding: 10px 0px 10px 30px;
+        border-radius: 10px;
+        margin-top: 40px;
+      }
+      .prep {
+        color: hsl(332, 51%, 32%);
+        font-weight: bold;
+        font-family: "Outfit", sans-serif;
+        margin-top: 20px;
+        font-size: 18px;
+      }
+      .cat .dog {
+        color: hsl(332, 51%, 32%);
+        font-family: "Outfit", sans-serif;
+        margin-left: 22px;
+        line-height: 30px;
+        margin-top: 10px;
+      }
+      .char {
+        line-height: 30px;
+      }
+      .cat {
+        margin-bottom: 30px;
+      }
+      .col {
+        font-weight: bold;
+        margin-left: 15px;
+        color: hsl(24, 5%, 18%);
+      }
+      .cor {
+        font-weight: bold;
+        color: hsl(24, 5%, 18%);
+      }
+      .man {
+        margin-left: 20px;
+      }
+      .gray {
+        color: hsl(0, 0%, 41%);
+      }
+      .ins {
+        font-family: "young serif", serif;
+        color: hsl(14, 45%, 36%);
+        margin-top: 30px;
+        font-size: 25px;
+      }
+      .ing {
+        font-family: "young serif", serif;
+        color: hsl(14, 45%, 36%);
+        margin-top: 30px;
+        font-size: 25px;
+        
+      }
+      .ini{
+        font-family: "young serif", serif;
+        color: hsl(14, 45%, 36%);
+        margin-top: 30px;
+        font-size: 25px;
+      }
+      .mouse .mace {
+        color: hsl(14, 45%, 36%);
+        font-family: "Outfit", sans-serif;
+        line-height: 30px;
+        margin-top: 10px;
+        margin-left: 22px;
+      }
+      .mice {
+        color: hsl(14, 45%, 36%);
+        font-family: "Outfit", sans-serif;
+        margin-left: 22px;
+      }
+
+      .eg {
+        color: hsl(0, 0%, 41%);
+        margin-left: 15px;
+      }
+      .en {
+        color: hsl(0, 0%, 41%);
+      }
+      hr{
+        margin-top: 30px;
+        border:1px solid rgb(235, 235, 235);
+      }
+      .con {
+        font-weight: bold;
+        color: hsl(24, 5%, 18%);
+      }
+      .cin {
+        margin-top: 20px;
+        color: hsl(0, 0%, 41%);
+        font-family: "Outfit", sans-serif;
+        line-height: 28px;
+      }
+      .par {
+        width: 100%;
+      }
+      .can {
+        color: hsl(0, 0%, 41%);
+      }
+      .maze {
+        margin-left: 15px;
+      }
+      .rit {
+        color: hsl(0, 0%, 41%);
+        font-family: "Outfit", sans-serif;
+        margin-top: 20px;
+        margin-left: 30px;
+      }
+      .lef {
+        color: hsl(14, 45%, 36%);
+        font-weight: bold;
+        margin-left: 245px;
+      }
+      .mn{
+       margin-top: 20px;
+       background-color: rgb(223, 223, 223);
+      } 
+      .leg{
+        color: hsl(14, 45%, 36%);
+        font-weight: bold;
+        margin-left: 260px;
+      }
+     .lek{
+      color: hsl(14, 45%, 36%);
+        font-weight: bold;
+        margin-left: 250px;
+     }
+     .len{
+      color: hsl(14, 45%, 36%);
+        font-weight: bold;
+        margin-left: 280px;
+     }
+     .attribution{
+      font-family: "Outfit", sans-serif;
+      font-size: 15px;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      text-align: center;
+     }
+
+      @media (max-width: 375px) {
+        * {
+          margin: 0;
+          padding: 0;
+        }
+        .parent {
+          margin: 0;
+          background-color: white;
+          padding: 0;
+          padding-bottom: 60px;
+        }
+        .omelette {
+          padding: 0;
+          border-radius: 0;
+          width: 100%;
+        }
+        h1 {
+          line-height: 35px;
+          font-size: 30px;
+          padding: 30px;
+          margin-top: 0;
+        }
+        .outfit {
+          font-family: "Outfit", sans-serif;
+          padding-left: 30px;
+          padding-right: 30px;
+          margin-top: 0;
+          font-size: 16px;
+          line-height: 20px;
+        }
+        .pink {
+          margin: 30px;
+          font-family: "outfit", sans-serif;
+        }
+        .media {
+          margin-left: 20px;
+        }
+        .col {
+          margin-bottom: 20px;
+        }
+        .char {
+          padding: 0px 30px;
+          
+        }
+
+        .ins {
+          padding: 0px 30px;
+          margin-top: 30px;
+        }
+
+        .mouse .mice {
+          font-family: "Outfit", sans-serif;
+          line-height: 30px;
+          margin-top: 10px;
+          margin-left: 22px;
+        }
+        .eg {
+          color: hsl(0, 0%, 41%);
+          margin-left: 15px;
+        }
+
+        hr {
+          margin-top: 30px;
+          border:1px solid rgb(235, 235, 235);
+          
+        }
+        .con {
+          font-weight: bold;
+          color: hsl(24, 5%, 18%);
+        }
+
+        .can {
+          color: hsl(0, 0%, 41%);
+        }
+        ol {
+          padding: 0px 30px;
+        }
+        .par{
+          padding: 0px 30px;
+        }
+        .lef {
+          color: hsl(14, 45%, 36%);
+          font-weight: bold;
+          margin-left: 80px;
+        }
+        .leg{
+        color: hsl(14, 45%, 36%);
+        font-weight: bold;
+        margin-left: 100px;
+      }
+     .lek{
+      color: hsl(14, 45%, 36%);
+        font-weight: bold;
+        margin-left: 90px;
+     }
+     .len{
+      color: hsl(14, 45%, 36%);
+        font-weight: bold;
+        margin-left: 120px;
+     }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div>
+        <img class="omelette" src="assets/images/image-omelette.jpeg" />
+      </div>
+      <div class="header"><h1>Simple Omelette Recipe</h1></div>
+      <div class="outfit">
+        An easy and quick dish, perfect for any meal. This classic omelette
+        combines beaten eggs cooked to perfection, optionally filled with your
+        choice of cheese, vegetables, or meats.
+      </div>
+      <div class="pink">
+        <div class="prep">Preparation time</div>
+        <ul class="cat">
+          <li class="dog">
+            <span class="col">Total</span
+            ><span class="gray"
+              >: Approximately <span class="media">10minutes</span></span
+            >
+          </li>
+
+          <li class="dog">
+            <span class="col">Preparation</span
+            ><span class="gray">: 5 minutes</span>
+          </li>
+          <li class="dog">
+            <span class="col">Cooking</span><span class="gray">: 5minutes</span>
+          </li>
+        </ul>
+      </div>
+      <div class="char">
+        <div class="ing">Ingredients</div>
+        <ul class="mouse">
+          <li class="mice"><span class="eg">2-3 large eggs</span></li>
+          <li class="mice"><span class="eg">Salt to taste</span></li>
+          <li class="mice"><span class="eg">Pepper,to taste</span></li>
+          <li class="mice">
+            <span class="eg">1 tablespoon of butter or oil</span>
+          </li>
+          <li class="mice">
+            <div class="maze">
+              <span class="en">
+                Optional fillings: cheese,diced vegetables,cooked
+                meats,herbs.</span
+              >
+            </div>
+          </li>
+        </ul>
+        <hr class="on"/>
+      </div>
+      <div class="rat">
+        <div class="ins">Instructions</div>
+        <div>
+          <ol class="mouse">
+            <li class="mace">
+              <div class="maze">
+                <span class="con">Beat the eggs</span>
+                <span class="can"
+                  >: In a bowl,beat the eggs with a pinch of salt and pepper
+                  until theyare well mixed.You can add a tablespoon of water or
+                  milk for a fluffier texture
+                </span>
+              </div>
+            </li>
+            <li class="mace">
+              <div class="maze">
+                <span class="con">Heat the pan</span>
+                <span class="can"
+                  >: Place a non-stick frying pan over medium heat and add
+                  butter or oil.</span
+                >
+              </div>
+            </li>
+            <li class="mace">
+              <div class="maze">
+                <span class="con">Cook the omelette</span
+                ><span class="can"
+                  >: Once the butter is melted and bubbling, pour in the the pan
+                  to ensure the eggs evenly coat the surface.</span
+                >
+              </div>
+            </li>
+            <li class="mace">
+              <div class="maze">
+                <span class="con">Add fillings (optional)</span>
+                <span class="can"
+                  >: When the eggs begin to set at the edges but are still
+                  slightly runny in the middle, sprinkle your chosen fillings
+                  over one half of the omelette.</span
+                >
+              </div>
+            </li>
+            <li class="mace">
+              <div class="maze">
+                <span class="con">Fold and serve</span>
+                <span class="can">
+                  : As the omelette continues to cook, carefully lift one edge
+                  and fold it over the fillings. Let it cook for another
+                  minute,then slide it onto a plate.</span
+                >
+              </div>
+            </li>
+            <li class="mace">
+              <div class="maze">
+                <span class="con">Enjoy</span>
+                <span class="can"
+                  >: Serve hot, with additional salt and pepper if needed.</span
+                >
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="par">
+        <hr />
+        <div class="ini">Nutrition</div>
+        <div class="cin">
+          The table below shows nutritional values per serving without the
+          additional fillings.
+        </div>
+        <div class="rit">Calories<span class="lef">277Kcal</span></div>
+        <hr class="mn">
+        <div class="rit">Carbs<span class="leg">0g</span></div>
+        <hr class="mn">
+        <div class="rit">Protein<span class="lek">20g</span></div>
+        <hr class="mn">
+        <div class="rit">Fat<span class="len">22g</span></div>
+        
+      </div>
+    </div>
+</div>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">DevBytes</a>.
+      </div>
+    </footer>
+   
+  </body>
+</html>
